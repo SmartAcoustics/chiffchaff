@@ -1,6 +1,6 @@
 [package]
 name = "chiffchaff"
-version = "0.9.0"
+version = "0.9.1-dev.0"
 edition = "2024"
 rust-version = "1.96"
 authors = ["Henry Gomersall <henry.gomersall@smartacoustics.co.uk>"]

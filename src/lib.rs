@@ -22,7 +22,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! chiffchaff = "0.1"
+//! chiffchaff = "0.9"
 //!
 //! [build-dependencies]
 //! chiffchaff = { version = "0.9", features = ["build"] }

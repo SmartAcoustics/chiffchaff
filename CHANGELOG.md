@@ -11,8 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.9.0] - 2026-11-17
 
-## [0.9.0] - 2026-11-17
-
 First version of `chiffchaff`: a small `no_std` crate that lets a piece of
 software say exactly which build it is.
 
@@ -40,5 +38,4 @@ software say exactly which build it is.
 
 <!-- next-url -->
 [Unreleased]: https://github.com/SmartAcoustics/chiffchaff/compare/v0.9.0...HEAD
-[0.9.0]: https://github.com/SmartAcoustics/chiffchaff/compare/v0.9.0...v0.9.0
 [0.9.0]: https://github.com/SmartAcoustics/chiffchaff/commits/main
