@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - ReleaseDate
 
+### Fixed
+- Corrected version number in lib.rs docs.
+
 ## [0.9.0] - 2026-11-17
 
 First version of `chiffchaff`: a small `no_std` crate that lets a piece of
