@@ -4,9 +4,15 @@ version = "0.9.0"
 edition = "2024"
 rust-version = "1.96"
 authors = ["Henry Gomersall <henry.gomersall@smartacoustics.co.uk>"]
-description = "A simple [no-std] tool for generating compact version information about a package that can be represented as a const and generated at compile time. The version information struct is guaranteed to be serializable to fit inside a 255-byte DNS record."
-license = "MIT OR Apache-2.0"
+description = "Identifies exactly which build of a piece of software is running, in a record that fits a DNS TXT string."
+license = "MIT OR Apache-2.0"   # or whichever licence you choose
 repository = "https://github.com/SmartAcoustics/chiffchaff"
+readme = "README.md"
+keywords = ["version", "build-info", "git", "no-std", "dns"]
+categories = ["development-tools::build-utils", "no-std"]
+
+[package.metadata.docs.rs]
+all-features = true
 
 [features]
 # Build-script support (`magpie_version::build::emit`). Enable only on the

@@ -1,6 +1,8 @@
 # chiffchaff
 
 [![CI](https://github.com/SmartAcoustics/chiffchaff/actions/workflows/ci.yml/badge.svg)](https://github.com/SmartAcoustics/chiffchaff/actions/workflows/ci.yml)
+[![crates.io](https://img.shields.io/crates/v/chiffchaff.svg)](https://crates.io/crates/chiffchaff)
+[![docs.rs](https://img.shields.io/docsrs/chiffchaff)](https://docs.rs/chiffchaff)
 
 A small `no_std` Rust crate that lets a piece of software say exactly which
 build it is: package name, whether it's a library or a named binary, version,
