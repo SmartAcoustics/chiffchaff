@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Corrected version number in lib.rs docs.
+- Fixed a minor issue in which rust-analyzer does not like the second argument to env!() to denote a missing environment variable
 
 ## [0.9.0] - 2026-11-17
 

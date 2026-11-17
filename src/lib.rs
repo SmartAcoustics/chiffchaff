@@ -160,14 +160,22 @@ macro_rules! get_crate_version {
         const DESCRIPTION: $crate::SoftwareDescription = match $crate::SoftwareDescription::try_new(
             ::core::env!("CARGO_PKG_NAME"),
             ::core::env!("CARGO_PKG_VERSION"),
-            ::core::env!(
-                "VERGEN_GIT_SHA",
-                "VERGEN_GIT_SHA is not set: call chiffchaff::build::emit() from this crate's build.rs"
-            ),
-            ::core::env!(
-                "VERGEN_GIT_DIRTY",
-                "VERGEN_GIT_DIRTY is not set: call chiffchaff::build::emit() from this crate's build.rs"
-            ),
+            // Not `env!("VERGEN_GIT_SHA", "message")`: some rust-analyzer versions
+            // reject `env!`'s message argument and flag every use of this
+            // macro, though rustc accepts it.
+            match ::core::option_env!("VERGEN_GIT_SHA") {
+                ::core::option::Option::Some(value) => value,
+                ::core::option::Option::None => ::core::panic!(
+                    "VERGEN_GIT_SHA is not set: call chiffchaff::build::emit() from this crate's build.rs"
+                ),
+            },
+            // As above.
+            match ::core::option_env!("VERGEN_GIT_DIRTY") {
+                ::core::option::Option::Some(value) => value,
+                ::core::option::Option::None => ::core::panic!(
+                    "VERGEN_GIT_DIRTY is not set: call chiffchaff::build::emit() from this crate's build.rs"
+                ),
+            },
             ::core::option_env!("CARGO_BIN_NAME"),
         ) {
             ::core::result::Result::Ok(description) => description,
