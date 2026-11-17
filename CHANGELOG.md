@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - ReleaseDate
 
+## [0.9.1] - 2026-11-17
+
 ### Fixed
 - Corrected version number in lib.rs docs.
 - Fixed a minor issue in which rust-analyzer does not like the second argument to env!() to denote a missing environment variable
@@ -41,5 +43,6 @@ software say exactly which build it is.
 - Works without the standard library or a heap; everything is fixed-size.
 
 <!-- next-url -->
-[Unreleased]: https://github.com/SmartAcoustics/chiffchaff/compare/v0.9.0...HEAD
+[Unreleased]: https://github.com/SmartAcoustics/chiffchaff/compare/v0.9.1...HEAD
+[0.9.1]: https://github.com/SmartAcoustics/chiffchaff/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/SmartAcoustics/chiffchaff/commits/main
