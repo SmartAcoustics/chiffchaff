@@ -99,7 +99,7 @@ record names that binary.
 
 ## Minimum supported Rust version
 
-Rust 1.87.
+Rust 1.96.
 
 ## Changes
 

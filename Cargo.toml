@@ -2,7 +2,7 @@
 name = "chiffchaff"
 version = "0.9.0"
 edition = "2024"
-rust-version = "1.87"
+rust-version = "1.96"
 authors = ["Henry Gomersall <henry.gomersall@smartacoustics.co.uk>"]
 description = "A simple [no-std] tool for generating compact version information about a package that can be represented as a const and generated at compile time. The version information struct is guaranteed to be serializable to fit inside a 255-byte DNS record."
 
