@@ -1,0 +1,20 @@
+[package]
+name = "chiffchaff"
+version = "0.9.0"
+edition = "2024"
+rust-version = "1.87"
+authors = ["Henry Gomersall <henry.gomersall@smartacoustics.co.uk>"]
+description = "A simple [no-std] tool for generating compact version information about a package that can be represented as a const and generated at compile time. The version information struct is guaranteed to be serializable to fit inside a 255-byte DNS record."
+
+[features]
+# Build-script support (`magpie_version::build::emit`). Enable only on the
+# build-dependency; the normal dependency stays no_std.
+build = ["snafu/std", "dep:vergen-gitcl", "dep:serde_json", "dep:anyhow"]
+
+[dependencies]
+# `rust_1_81` implements `core::error::Error`, so errors work without std.
+snafu = { version = "0.9.2", default-features = false, features = ["rust_1_81"] }
+vergen-gitcl = { version = "10", optional = true }
+serde_json = { version = "1", optional = true }
+# vergen's error type; only named so it can be wrapped as an error source.
+anyhow = { version = "1", optional = true }
